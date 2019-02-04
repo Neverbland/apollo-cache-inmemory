@@ -26,21 +26,6 @@
     "url": "https://github.com/apollographql/apollo-client/issues"
   },
   "homepage": "https://github.com/apollographql/apollo-client#readme",
-  "scripts": {
-    "prepare": "npm run build",
-    "coverage": "jest --coverage",
-    "test": "jest",
-    "lint": "tslint -c \"../../config/tslint.json\" -p tsconfig.json src/*.ts",
-    "prebuild": "npm run clean",
-    "build": "tsc -p .",
-    "postbuild": "npm run bundle",
-    "bundle": "../../node_modules/rollup/bin/rollup -c rollup.config.js",
-    "watch": "tsc -w -p .",
-    "clean": "rm -rf coverage/* && rm -rf lib/*",
-    "prepublishOnly": "npm run build",
-    "minify": "../../node_modules/uglify-js/bin/uglifyjs -c -m -o ./lib/bundle.min.js -- ./lib/bundle.umd.js",
-    "filesize": "npm run minify"
-  },
   "dependencies": {
     "apollo-cache": "^1.1.25",
     "apollo-utilities": "^1.1.2",
